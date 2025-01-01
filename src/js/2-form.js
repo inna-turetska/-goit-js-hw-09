@@ -40,6 +40,10 @@ const onFeedbackFormSubmit = event => {
         alert('Fill please all fields');
         return;
     }
+
+    console.log(formData);
+
+    formData = {};
     const formEl = event.currentTarget;
     
     formEl.reset();
