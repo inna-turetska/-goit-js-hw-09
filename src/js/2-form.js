@@ -36,7 +36,7 @@ const onFormFieldChange = event => {
 
 const onFeedbackFormSubmit = event => {
     event.preventDefault();
-  if (formData.email.trim() === "" || formData.message.trim() === "") {
+  if (!(formData.email && formData.email.trim()) || !(formData.message && formData.message.trim())) {
         alert('Fill please all fields');
         return;
     }
